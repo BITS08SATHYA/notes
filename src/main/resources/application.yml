@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: notes
+  security:
+    user:
+      name: admin
+      password: mypassword
