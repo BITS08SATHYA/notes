@@ -5,3 +5,20 @@ spring:
     user:
       name: admin
       password: mypassword
+  datasource:
+    url: jdbc:postgresql://172.17.0.4:5432/securenotes
+    username: postgres
+    password: mypassword
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG

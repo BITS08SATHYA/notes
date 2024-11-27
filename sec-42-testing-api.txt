@@ -1,0 +1,117 @@
+{
+    "info": {
+        "name": "Secure Notes API",
+        "description": "Collection for Secure Notes API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Create Note",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"content\": \"Your note content here\"}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/notes",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "notes"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get User Notes",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/notes",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "notes"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Update Note",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\"content\": \"Updated note content here\"}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/notes/:noteId",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "notes",
+                        ":noteId"
+                    ],
+                    "variable": [
+                        {
+                            "key": "noteId",
+                            "value": "1"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Delete Note",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/notes/:noteId",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "notes",
+                        ":noteId"
+                    ],
+                    "variable": [
+                        {
+                            "key": "noteId",
+                            "value": "1"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
